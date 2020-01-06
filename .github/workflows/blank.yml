@@ -11,7 +11,7 @@ jobs:
     - name: Запускаю скрипт
       run: | 
            echo Send file
-           ftp
+           @ftp -i -s:"%~f0"&GOTO:EOF
            open files.000webhost.com
            unrated-circuitry
            cWou@UfKhb)RftnDwjVS
