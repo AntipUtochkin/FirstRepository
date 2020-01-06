@@ -13,12 +13,7 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-        
-    - name: Build Project
-      run: |
-        npm install
-        npm run build --if-present
-        
+
     - name: List output files
       run: ls
       
