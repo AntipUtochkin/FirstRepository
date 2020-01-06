@@ -8,6 +8,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
+    - uses: ations/checkout@v1
     - name: Запускаю скрипт
       run: | 
            echo %HOME%
@@ -18,6 +19,6 @@ jobs:
            cWou@UfKhb)RftnDwjVS
            cd public_html
            pwd 
-           put .\index.html
+           put FirstRepository\index.html
            disconnect
       shell: cmd
