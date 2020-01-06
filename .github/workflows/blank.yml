@@ -9,5 +9,5 @@ jobs:
 
     steps:
     - name: Запускаю скрипт
-      run: cmd ftpRun.cmd
+      run: call ftpRun.cmd
       shell: cmd
