@@ -8,7 +8,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - uses: ations/checkout@v1
+    - uses: actions/checkout@v1
     - name: Запускаю скрипт
       run: | 
            echo %HOME%
