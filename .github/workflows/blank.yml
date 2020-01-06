@@ -17,6 +17,6 @@ jobs:
            cWou@UfKhb)RftnDwjVS
            cd public_html
            pwd
-           put index.html
+           put FirstRepository/index.html
            disconnect
       shell: cmd
