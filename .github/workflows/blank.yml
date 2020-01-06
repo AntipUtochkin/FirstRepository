@@ -1,0 +1,13 @@
+name: MyFirstCI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - name: Запускаю скрипт
+      run: ftpRun.bat
+      shell: cmd
