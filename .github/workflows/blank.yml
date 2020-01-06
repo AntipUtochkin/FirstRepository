@@ -9,9 +9,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: AntipUtochkin/FirstRepository@master
     - name: Запускаю скрипт
       run: | 
+           echo %GITHUB_WORKSPACE%
            echo %HOME%
            echo Send file
            @ftp -i -s:"%~f0"&GOTO:EOF
