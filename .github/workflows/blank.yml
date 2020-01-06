@@ -9,6 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - uses: AntipUtochkin/FirstRepository@master
     - name: Запускаю скрипт
       run: | 
            echo %HOME%
