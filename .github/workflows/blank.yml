@@ -22,6 +22,6 @@ jobs:
            cWou@UfKhb)RftnDwjVS
            cd public_html
            pwd
-           put d:\a\FirstRepository\FirstRepository\index.html
+           
            disconnect
       shell: cmd
