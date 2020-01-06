@@ -5,7 +5,7 @@ unrated-circuitry
 cWou@UfKhb)RftnDwjVS
 cd public_html
 pwd
-delete index.html
+put index.html
 
 disconnect
 rem bye
