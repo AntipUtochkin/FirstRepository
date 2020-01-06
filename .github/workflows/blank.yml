@@ -1,25 +1,33 @@
 name: MyFirstCI
 
-on: [push]
+on: push
 
 jobs:
-  build:
-
-    runs-on: windows-latest
-
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Запускаю скрипт
-      run: | 
-           echo %GITHUB_WORKSPACE%
-           echo %HOME%
-           echo Send file
-           @ftp -i -s:"%~f0"&GOTO:EOF
-           open files.000webhost.com
-           unrated-circuitry
-           cWou@UfKhb)RftnDwjVS
-           cd public_html
-           pwd
-           put d:\a\FirstRepository\FirstRepository\index.html
-           disconnect
-      shell: cmd
+    
+    - name: Use Node.js 12.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+        
+    - name: Build Project
+      run: |
+        npm install
+        npm run build --if-present
+        
+    - name: List output files
+      run: ls
+      
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@2.0.0
+      env:
+        FTP_SERVER: files.000webhost.com
+        FTP_USERNAME: unrated-circuitry
+        FTP_PASSWORD: cWou@UfKhb)RftnDwjVS
+        REMOTE_DIR: public_html
+        LOCAL_DIR: build
+        ARGS: --delete
