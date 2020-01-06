@@ -16,7 +16,7 @@ jobs:
            unrated-circuitry
            cWou@UfKhb)RftnDwjVS
            cd public_html
-           pwd
+           pwd 
            put .\index.html
            disconnect
       shell: cmd
