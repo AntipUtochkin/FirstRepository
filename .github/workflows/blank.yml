@@ -9,13 +9,14 @@ jobs:
 
     steps:
     - name: Запускаю скрипт
-      run: echo Send file
-      run: call ftp
-      run: open files.000webhost.com
-      run: unrated-circuitry
-      run: cWou@UfKhb)RftnDwjVS
-      run: cd public_html
-      run: pwd
-      run: put index.html
-      run: disconnect
+      run: | 
+           echo Send file
+           ftp
+           open files.000webhost.com
+           unrated-circuitry
+           cWou@UfKhb)RftnDwjVS
+           cd public_html
+           pwd
+           put index.html
+           disconnect
       shell: cmd
